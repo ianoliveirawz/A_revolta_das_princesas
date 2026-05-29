@@ -139,6 +139,48 @@ while hp_branca > 0 and hp_pe_solto > 0:
 
                     if escolha_inimigo == 1 :
                         dano = 10 
+                        hp_branca -= dano
+                        print("pé solto usou CHUTE!")
+
+                    elif escolha_inimigo == 2:
+                        dano = 20
+                        hp_branca -= dano
+                        print ("pe solto usou MAGIA!")
+
+                    elif escolha_inimigo == 3:
+                        dano = 30
+                        hp_branca -= dano
+                        print("pe solto usou ESPADA!")
+
+                    elif escolha_inimigo == 4:
+
+                        if pocao_pe_solto > 0:
+
+                         cura = 25
+                         hp_pe_solto += cura
+                         pocao_pe_solto -=1
+
+                         if hp_pe_solto > 100 :
+                             hp_pe_solto = 100
+                            
+                        print("pe solto usou uma POCAO!")
+                        print(f"pe solto recuperou {cura} de vida!")
+
+                    else:
+                        dano = 15
+                        hp_branca -= dano
+                        print("pe solto tentou usar poção mas nao tinha!")
+                        print("entao acabou normalmente")
+
+                        # FIM DO JOGO
+                        print("\n ==== FIM DA BATALHA ====")
+
+                        if hp_branca> 0 :
+                            print (" branca de leite venceu!")
+                        else:
+                            print (" pe solto venceu!")
+
+
                     
 
 
